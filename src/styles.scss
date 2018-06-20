@@ -1,0 +1,17 @@
+/* You can add global styles to this file, and also import other style files */
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+div {
+    font-family: 'Calibri';font-size: 110%;
+}
+
+.mat-option {
+    font-family: 'Calibri';
+    font-size: 80% !important;
+}
+
+
+.mat-tooltip  {
+   font-size: 70% !important;
+   font-family: 'Calibri';
+   }
