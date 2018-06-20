@@ -16,6 +16,8 @@ import { ScheduleServicesComponent } from './Admin/schedule-services/schedule-se
 import { UsersServicesComponent } from './Admin/users-services/users-services.component';
 import { BusListComponent } from './Admin/bus-services/bus-list/bus-list.component';
 import { BusLocationComponent } from './Admin/bus-services/bus-location/bus-location.component';
+import { RoutedirectionComponent } from './Admin/routes-services/routedirection/routedirection.component';
+import { MarkroutesComponent } from './Admin/routes-services/markroutes/markroutes.component';
 
 const routes: Routes = [
     { path: '', redirectTo: 'Welcome', pathMatch: 'full' },
@@ -48,6 +50,7 @@ const routes: Routes = [
               { path: 'Schedules', component: ScheduleServicesComponent },
               { path: 'BusList', component: BusListComponent },
               { path: 'BusLocation', component: BusLocationComponent },
+              { path: 'MarkRoute', component: MarkroutesComponent },
             { path: '**', component: LiveTrackingComponent, pathMatch: 'full' }
         ]
         // , data: {
