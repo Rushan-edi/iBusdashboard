@@ -16,11 +16,17 @@ import { ScheduleServicesComponent } from './Admin/schedule-services/schedule-se
 import { UsersServicesComponent } from './Admin/users-services/users-services.component';
 import { BusListComponent } from './Admin/bus-services/bus-list/bus-list.component';
 import { BusLocationComponent } from './Admin/bus-services/bus-location/bus-location.component';
+<<<<<<< HEAD
 import { RoutedirectionComponent } from './Admin/routes-services/routedirection/routedirection.component';
 import { MarkroutesComponent } from './Admin/routes-services/markroutes/markroutes.component';
+=======
+import { AddroutesComponent } from './Admin/routes-services/addroutes/addroutes.component';
+import { MarkroutesComponent } from './Admin/routes-services/markroutes/markroutes.component';
+import { RoutedirectionComponent } from './Admin/routes-services/routedirection/routedirection.component';
+>>>>>>> 5dae9769cd829a29e24e9dee1c32a9757a1d2f53
 
 const routes: Routes = [
-    { path: '', redirectTo: 'Welcome', pathMatch: 'full' },
+    { path: '', redirectTo: 'Admin', pathMatch: 'full' },
     { path: 'Welcome', component: LandingPageComponent },
     //   { path: 'DepartmentSummary', component: DepartmentSummeryComponent },
     {
@@ -50,7 +56,13 @@ const routes: Routes = [
               { path: 'Schedules', component: ScheduleServicesComponent },
               { path: 'BusList', component: BusListComponent },
               { path: 'BusLocation', component: BusLocationComponent },
+<<<<<<< HEAD
               { path: 'MarkRoute', component: MarkroutesComponent },
+=======
+              { path: 'add-route', component: AddroutesComponent },
+              { path: 'mark-route', component: MarkroutesComponent },
+              { path: 'route-direction', component: RoutedirectionComponent },
+>>>>>>> 5dae9769cd829a29e24e9dee1c32a9757a1d2f53
             { path: '**', component: LiveTrackingComponent, pathMatch: 'full' }
         ]
         // , data: {
