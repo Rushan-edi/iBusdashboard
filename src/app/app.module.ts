@@ -29,6 +29,7 @@ import { BusLocationComponent } from './Admin/bus-services/bus-location/bus-loca
 import { AddroutesComponent } from './Admin/routes-services/addroutes/addroutes.component';
 import { MarkroutesComponent } from './Admin/routes-services/markroutes/markroutes.component';
 import { RoutedirectionComponent } from './Admin/routes-services/routedirection/routedirection.component';
+import { FormBuilder } from '@angular/forms';
 
 @NgModule({
     declarations: [
@@ -69,7 +70,7 @@ import { RoutedirectionComponent } from './Admin/routes-services/routedirection/
 
     ],
     schemas: [NO_ERRORS_SCHEMA],
-    providers: [],
+    providers: [FormBuilder],
     bootstrap: [AppComponent]
 })
 export class AppModule { }

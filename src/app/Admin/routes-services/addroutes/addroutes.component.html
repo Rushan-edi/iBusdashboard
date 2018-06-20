@@ -1,3 +1,68 @@
-<p>
-  addroutes works!
-</p>
+<div class="container">
+  <div class="col-md-12">
+
+    <div class="card card-cascade narrower">
+      <!--Panel-->
+      <div class="card">
+        <h3 class="card-header mdb-color lighten-2 white-text">Add Route</h3>
+        <div class="card-body">
+          <form>
+
+            <div class="row">
+              <div class="col-md-6">
+                <div class="md-form">
+                  <input mdbInputDirective type="text" id="form1" class="form-control">
+                  <label for="form1" class="">Route No</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-6">
+                <h5 class="">Route</h5>
+                <div class="md-form">
+                  <input mdbInputDirective type="text" id="form2" class="form-control">
+                  <label for="form2" class="">From</label>
+                </div>
+                <div class="md-form">
+                  <input mdbInputDirective type="text" id="form2_2" class="form-control">
+                  <label for="form2_2" class="">To</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <!-- <div formArrayName="linktodrive"></div> -->
+              <div class="col-md-6">
+                <div>
+                  <h5 class="display-inline">Stations</h5>
+                  <button type="button" (click)="addLink()" class="btn btn-sm btn-primary add-button" mdbWavesEffect>+</button>
+                </div>
+                <div *ngFor="let address of addForm.controls.linktodrive.controls; let i=index">
+                  <div class="md-form" [formGroupName]="i">
+                    <input mdbInputDirective type="text" id="station{{i}}" class="form-control" formControlName="linkAddress">
+                    <label for="station{{i}}" class="">Station {{i + 1}}</label>
+                    <span *ngIf="addForm.controls.linktodrive.controls.length > 1">
+                      <button type="button" (click)="removeLink(i)" class="btn btn-sm btn-danger" mdbWavesEffect>-</button>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="md-form">
+                  <!-- Indicates a successful or positive action -->
+                  <button type="button" class="btn btn-success waves-light" mdbWavesEffect>Save</button>
+                  <button type="button" class="btn btn-outline-primary " mdbWavesEffect>
+                    <b>Reset</b>
+                  </button>
+                </div>
+              </div>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <!--/.Panel-->
+    </div>
+  </div>
+</div>
