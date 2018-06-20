@@ -11,5 +11,10 @@ export class MarkroutesComponent implements OnInit {
 
   ngOnInit() {
   }
-
+  routes = [
+    '120 - Colombo - Horana',
+    '120 - Colombo - Kesbewa',
+    '138 - Colombo - Kottawa',
+    '157 - Piliyandala - Madapatha'
+  ];
 }

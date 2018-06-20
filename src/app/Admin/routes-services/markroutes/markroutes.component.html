@@ -11,8 +11,10 @@
                       <div class="row">
                       <div class="col-md-6">
                           <div class="md-form">
-                              <input mdbInputDirective type="text" id="form1" class="form-control">
-                              <label for="form1" class="">Route No :</label>
+                            <mat-select placeholder="Route Number">
+                              <mat-option>None</mat-option>
+                              <mat-option *ngFor="let route of routes" [value]="route">{{route}}</mat-option>
+                          </mat-select>
                           </div>
                       </div>
                       <div class="col-md-6">
@@ -25,13 +27,13 @@
                       <div class="row">
                               <div class="col-md-3">
                                   <div class="md-form">
-                                      <input mdbInputDirective type="text" id="form3" class="form-control">
+                                      <input mdbInputDirective type="text" value="Kollupitiya" id="form3" class="form-control">
                                       <label for="form3" class="">Route Start:</label>
                                   </div>
                               </div>
                               <div class="col-md-3">
                                   <div class="md-form">
-                                      <input mdbInputDirective type="text" id="form4" class="form-control">
+                                      <input mdbInputDirective type="text" value="Kaduwela" id="form4" class="form-control">
                                       <label for="form4" class="">Route End:</label>
                                   </div>
                               </div>
@@ -60,13 +62,13 @@
                                     <tr>
 
                                         <td><input mdbInputDirective type="text" id="form3" value="Rajagiriya" class="form-control"></td>
-                                        <td><input mdbInputDirective type="text" id="form3" value="Kollupitiya"  class="form-control"></td>
-                                        <td><input mdbInputDirective type="text" id="form3" value="Kollupitiya" class="form-control"></td>
+                                        <td><input mdbInputDirective type="text" id="form3" value="1.024589"  class="form-control"></td>
+                                        <td><input mdbInputDirective type="text" id="form3" value="7.5845454" class="form-control"></td>
                                     </tr>
                                     <tr>
                                         <td><input mdbInputDirective type="text" id="form3" value="Malabe" class="form-control"></td>
-                                        <td><input mdbInputDirective type="text" id="form3" value="Kollupitiya" class="form-control"></td>
-                                        <td><input mdbInputDirective type="text" id="form3" value="Kollupitiya" class="form-control"></td>
+                                        <td><input mdbInputDirective type="text" id="form3" value="1.024589" class="form-control"></td>
+                                        <td><input mdbInputDirective type="text" id="form3" value="7.5845454" class="form-control"></td>
                                     </tr>
                                 </tbody>
                                 <!--Table body-->

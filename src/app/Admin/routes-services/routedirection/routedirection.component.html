@@ -1,3 +1,94 @@
-<p>
-  routedirection works!
-</p>
+<div class="container">
+  <div class="col-md-12">
+
+  <div class="card card-cascade narrower">
+      <!--Panel-->
+<div class="card">
+      <h3 class="card-header mdb-color lighten-2 white-text">Route Direction</h3>
+      <!-- <div class="card-body"> -->
+<div class="map-container">
+      <!-- <div class="col-md-12"> -->
+
+          <!--Card-->
+          <div class="card card-cascade narrower">
+              <!--Card image-->
+
+              <div class="view overlay hm-white-slight waves-light" mdbWavesEffect>
+                  <agm-map [latitude]="lat" [longitude]="lng">
+                      <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+                  </agm-map>
+                  <a>
+                      <div class="mask"></div>
+                  </a>
+              </div>
+              <div class="row">
+                  <div class="col-md-12 col-sm-12">
+                      <div class="indicators">
+                          <span>
+                              <i aria-hidden="true" class="fadeEffect fa fa-circle on-going" matTooltip="This indicator shows the on going busses"></i>
+                              <i aria-hidden="true" class="fadeEffect fa fa-circle idle" matTooltip="This indicator shows the idle busses"></i>
+                              <i aria-hidden="true" class="fadeEffect fa fa-circle not-functioning" matTooltip="This indicator shows the not functioning busses"></i>
+                          </span>
+                      </div>
+                  </div>
+              </div>
+              <!--/.Card image-->
+
+              <!--Card content-->
+              <div class="card-body" >
+                  <!--Checkbox butons-->
+
+
+                  <div class="row">
+                      <!-- <div class="col-md-12"> -->
+                          <mat-form-field class="margin">
+                              <mat-select placeholder="Route Number">
+                                  <mat-option>None</mat-option>
+                                  <mat-option *ngFor="let route of routes" [value]="route">{{route}}</mat-option>
+                              </mat-select>
+                          </mat-form-field>
+
+
+
+                      <!-- </div> -->
+                      <div class="col-md-6">
+                        <div class="md-form">
+                          <!-- Indicates a successful or positive action -->
+                          <button type="button" class="btn btn-primary btn-rounded waves-light" mdbWavesEffect>Search</button>
+                      </div> 
+
+                  </div>
+                  <table class="table table-striped">
+
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td>Bus No : PA-3423</td>
+                                            <td>0714524145</td>
+                                            <td>Running</td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row"></th>
+                                            <td>Bus No : PA-3423</td>
+                                            <td>0714524145</td>
+                                            <td>Running</td>
+                                        </tr>
+
+                                    </tbody>
+                                    <!--Table body-->
+                                </table>
+              </div>
+              </div>
+              <!--/.Card content-->
+
+          </div>
+          <!--/.Card-->
+
+      <!-- </div> -->
+  </div>
+
+<!-- </div> -->
+  <!--/.Panel-->
+</div>
+</div>
+</div>
