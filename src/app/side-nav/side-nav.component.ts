@@ -89,20 +89,9 @@ export class SideNavComponent implements OnInit {
     routerLink: './Schedules'
   },
   {
-<<<<<<< HEAD
-    icon: "donut_large",
-    item: "Mark Routes",
-    routerLink: "./MarkRoute"
-  },
-  {
-    icon: "assignment",
-    item: "Bus Schedules",
-    routerLink: "./Schedules"
-=======
     icon: 'insert_chart',
     item: 'Report',
     routerLink: './Profile'
->>>>>>> 5dae9769cd829a29e24e9dee1c32a9757a1d2f53
   },
   {
     icon: 'settings',
