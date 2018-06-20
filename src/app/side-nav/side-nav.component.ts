@@ -11,6 +11,8 @@ export class SideNavComponent implements OnInit {
   mobileQuery: MediaQueryList;
   private _mobileQueryListener: () => void;
   public scrollbarOptions = { axis: "y", theme: "dark-thin" };
+  busMenuCheck = false;
+  routeMenuCheck = false;
 
   constructor(private router: Router, changeDetectorRef: ChangeDetectorRef, media: MediaMatcher) {
     this.mobileQuery = media.matchMedia('(max-width: 700px)');
@@ -26,48 +28,78 @@ export class SideNavComponent implements OnInit {
     this.router.navigate(['/SignIn']);
   }
 
+  // tslint:disable-next-line:member-ordering
+  busMenu = [
+    {
+      icon: 'departure_board',
+      item: 'Add Busses',
+      routerLink: './AddBusses'
+    },
+    {
+      icon: 'departure_board',
+      item: 'Bus List',
+      routerLink: './BusList'
+    },
+    {
+      icon: 'near_me',
+      item: 'Bus Location',
+      routerLink: './BusLocation'
+    },
+  ];
 
+  // tslint:disable-next-line:member-ordering
+  routeMenu = [
+    {
+      icon: 'donut_large',
+      item: 'Add Routes',
+      routerLink: './add-route'
+    },
+    {
+      icon: 'donut_large',
+      item: 'Mark route',
+      routerLink: './mark-route'
+    },
+    {
+      icon: 'donut_large',
+      item: 'Route Direction',
+      routerLink: './route-direction'
+    },
+  ];
+  // tslint:disable-next-line:member-ordering
   sideMenu = [{
-    icon: "person",
-    item: "Users",
-    routerLink: "./Users"
-  },
-
-  {
-    icon: "departure_board",
-    item: "Busses",
-    routerLink: "./AddBusses"
+    icon: 'person',
+    item: 'Users',
+    routerLink: './Users'
   },
   {
-    icon: "departure_board",
-    item: "Bus List",
-    routerLink: "./BusList"
+    icon: 'departure_board',
+    item: 'Busses',
+    subItems: this.busMenu,
+    check: this.busMenuCheck
   },
   {
-    icon: "near_me",
-    item: "Bus Location",
-    routerLink: "./BusLocation"
+    icon: 'donut_large',
+    item: 'Routes',
+    subItems: this.routeMenu,
+    check: this.routeMenuCheck
   },
   {
-    icon: "donut_large",
-    item: "Routes",
-    routerLink: "./Routes"
+    icon: 'assignment',
+    item: 'Bus Schedules',
+    routerLink: './Schedules'
   },
   {
-    icon: "assignment",
-    item: "Bus Schedules",
-    routerLink: "./Schedules"
+    icon: 'insert_chart',
+    item: 'Report',
+    routerLink: './Profile'
   },
   {
-    icon: "insert_chart",
-    item: "Report",
-    routerLink: "./Profile"
-  },
-  {
-    icon: "settings",
-    item: "Settings",
-    routerLink: "./Settings"
+    icon: 'settings',
+    item: 'Settings',
+    routerLink: './Settings'
   }
-  ]
+  ];
+
+
 
 }
