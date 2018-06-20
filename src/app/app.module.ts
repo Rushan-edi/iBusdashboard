@@ -26,6 +26,9 @@ import { BusListComponent } from './Admin/bus-services/bus-list/bus-list.compone
 import { BusAddComponent } from './Admin/bus-services/bus-add/bus-add.component';
 import { BusEditComponent } from './Admin/bus-services/bus-edit/bus-edit.component';
 import { BusLocationComponent } from './Admin/bus-services/bus-location/bus-location.component';
+import { AddroutesComponent } from './Admin/routes-services/addroutes/addroutes.component';
+import { MarkroutesComponent } from './Admin/routes-services/markroutes/markroutes.component';
+import { RoutedirectionComponent } from './Admin/routes-services/routedirection/routedirection.component';
 
 @NgModule({
     declarations: [
@@ -47,7 +50,10 @@ import { BusLocationComponent } from './Admin/bus-services/bus-location/bus-loca
         BusListComponent,
         BusAddComponent,
         BusEditComponent,
-        BusLocationComponent
+        BusLocationComponent,
+        AddroutesComponent,
+        MarkroutesComponent,
+        RoutedirectionComponent
     ],
     imports: [
         BrowserModule,
